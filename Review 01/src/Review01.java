@@ -38,6 +38,15 @@ public class Review01 {
         }
         //a do while loop can be used to navigate through an array
 
+        int fill = 1;
 
+        int[][] table = new int[10][3];
+
+        for (int k = 0; k <10 ; k++) {
+            for (int l = 0; l <3 ; l++) {
+                table[k][l] = fill;
+                        fill++;
+            }
+        }
     }
 }
