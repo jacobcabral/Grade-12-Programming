@@ -1,3 +1,7 @@
+import java.sql.SQLOutput;
+import java.util.List;
+import java.util.Scanner;
+
 public class Review02 {
     public static void main(String[] args) {
         String notes = "ABCDEFG";
@@ -67,6 +71,122 @@ public class Review02 {
             doubles[r] = (doubles[r]*2);
             triple[r] = (triple[r]*3);
         }
+
+        int dim = 8;
+        for (int i = 0; i < dim * dim; i++) System.out.print((i % dim == 0 ? "\n" : "") + ((i / dim) % 2 == 0 ? i % 2 == 0 ? 'B' : 'W' : i % 2 == 0 ? 'W' : 'B') + " ");
+
+        System.out.println();
+        System.out.println();
+
+        String sNumbers = "10-9-8-7-6";
+
+        //coonvert to peices
+        String[] parts = sNumbers.split("-");
+        String part1 = parts[0];
+        String part2 = parts[1];
+        String part3 = parts[2];
+        String part4 = parts[3];
+        String part5 = parts[4];
+
+        //make the peices ints
+       int pos0 =  Integer.parseInt(part1);
+       int pos1 =  Integer.parseInt(part2);
+       int pos2 =  Integer.parseInt(part3);
+       int pos3 =  Integer.parseInt(part4);
+       int pos4 =  Integer.parseInt(part5);
+
+
+
+
+       if ((pos0-pos1==1) && (pos1-pos2==1) && (pos2-pos3==1) && (pos3-pos4==1)){
+           System.out.println("The numbers are consecutive");
+       }
+       else{
+           System.out.println("The numbers are not consecutive");
+       }
+        System.out.println();
+        if (pos0 == pos1){
+            System.out.println("pair detected");
+        } else if (pos0 == pos2){
+            System.out.println("pair detected");
+        }else if (pos0 == pos3){
+            System.out.println("pair detected");
+        }else if (pos0 == pos4){
+            System.out.println("pair detected");
+        }else if (pos1 == pos2){
+            System.out.println("pair detected");
+        }else if (pos1 == pos3){
+            System.out.println("pair detected");
+        }else if (pos1 == pos4){
+            System.out.println("pair detected");
+        }else if (pos2 == pos3){
+            System.out.println("pair detected");
+        }else if (pos2 == pos4){
+            System.out.println("pair detected");
+        }else if (pos3 == pos4){
+            System.out.println("pair detected");
+        }
+
+
+        System.out.println("D");
+        System.out.println(" I");
+        System.out.println("  A");
+        System.out.println("   G");
+        System.out.println("    O");
+        System.out.println("     N");
+        System.out.println("      A");
+        System.out.println("       L");
+        System.out.println("        L");
+        System.out.println("         Y");
+
+        System.out.println();
+
+        String teams = "Manchester United 1 Chelsea 0, Manchester United 1 Arsenal 1 , Manchester United 3 Fulham 1, Manchester United 1 Liverpool 2, Manchester United 4 Swansea 2 ";
+        String[] games = teams.split(",");
+        String[] nums = new String[5];
+        int[] iMscore = new int[5];
+        int[] iOscore = new int[5];
+        int wins = 0;
+        int draws = 0;
+        int losses = 0;
+        int mGtotal = 0;
+        int oGtotal = 0;
+        int points = 0;
+        for (int i = 0; i < games.length; i++) {
+            nums[i] = games[i].replaceAll("[^0-9]", "");
+            iMscore[i] = Integer.parseInt(nums[i].substring(0,1));
+            iOscore[i] = Integer.parseInt(nums[i].substring(1,2));
+        }
+        for (int i = 0; i < 5; i++) {
+            if(iMscore[i] > iOscore[i]){
+                wins++;
+            }
+            else if(iMscore[i] == iOscore[i]){
+                losses++;
+            }
+            else{
+                draws++;
+            }
+        }
+        for (int i = 0; i < iMscore.length; i++) {
+            mGtotal += iMscore[i];
+            oGtotal += iOscore[i];
+        }
+        points = wins * 3 + draws;
+        System.out.println("Number of Wins = " + wins);
+        System.out.println("Number of Draws = " + draws);
+        System.out.println("Number of Losses = " + losses);
+        System.out.println("Goals For = " + mGtotal);
+        System.out.println("Goals Against = " + oGtotal);
+        System.out.println("Number of Points = " + points);
+
+
+
+
+
+
+
+
 
 
 
