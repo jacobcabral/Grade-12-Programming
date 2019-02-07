@@ -149,14 +149,16 @@ public class Review02 {
         int wins = 0;
         int draws = 0;
         int losses = 0;
-        int mGtotal = 0;
-        int oGtotal = 0;
+        int home = 0;
+        int away = 0;
         int points = 0;
         for (int i = 0; i < games.length; i++) {
             nums[i] = games[i].replaceAll("[^0-9]", "");
             iMscore[i] = Integer.parseInt(nums[i].substring(0,1));
             iOscore[i] = Integer.parseInt(nums[i].substring(1,2));
         }
+
+
         for (int i = 0; i < 5; i++) {
             if(iMscore[i] > iOscore[i]){
                 wins++;
@@ -169,15 +171,17 @@ public class Review02 {
             }
         }
         for (int i = 0; i < iMscore.length; i++) {
-            mGtotal += iMscore[i];
-            oGtotal += iOscore[i];
+            home += iMscore[i];
+            away += iOscore[i];
         }
+
+
         points = wins * 3 + draws;
         System.out.println("Number of Wins = " + wins);
         System.out.println("Number of Draws = " + draws);
         System.out.println("Number of Losses = " + losses);
-        System.out.println("Goals For = " + mGtotal);
-        System.out.println("Goals Against = " + oGtotal);
+        System.out.println("Goals For = " + home);
+        System.out.println("Goals Against = " + away);
         System.out.println("Number of Points = " + points);
 
 
