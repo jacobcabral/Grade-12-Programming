@@ -1,5 +1,6 @@
 public class Review03 {
     public static void main(String[] args) {
+        //enhanced for
         char[] name = {'J', 'a','c', 'o', 'b'};
 
         for (char item: name) {
@@ -27,6 +28,7 @@ public class Review03 {
         xXorY = x ^ y;
         System.out.println("true XOR true: "+xXorY); //false
 
+        //case statement with strings
         String mark = "C";
 
         switch (mark){
@@ -47,6 +49,42 @@ public class Review03 {
                 System.out.println("you did not enter a valid grade");
         }
         System.out.println("The results are: " + mark);
+
+        //case statements with ints
+        int test = 15;
+
+        switch (test){
+            case 15 :
+                System.out.println("The number is fifteen");
+                break;
+            case 14 :
+                System.out.println("The number is fourteen");
+            case 13 :
+                System.out.println("The number is thirteen");
+            case 12 :
+                System.out.println("the number is twelve");
+            default:
+                System.out.println("The number was improperly entered");
+        }
+        System.out.println(test);
+
+        String[] lookforname = {"Jacob","Owen","Ethan","Aavin","Griffin", "Callum"};
+        String suspect = "Aavin";
+        boolean found = false;
+        int i = 0;
+        for (i = 0; i <lookforname.length ; i++) {
+            if (lookforname[i] == suspect){
+                found = true;
+                break;
+            }
+        }
+        if (found){
+            System.out.println("The authorities have been notified, it's the " + i + " person in line");
+        }
+        else{
+            System.out.println("Suspect not found");
+        }
+        //continue statement using strings
 
 
     }
