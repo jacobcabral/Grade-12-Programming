@@ -84,7 +84,16 @@ public class Review03 {
         else{
             System.out.println("Suspect not found");
         }
-        //continue statement using strings
+
+        String sName = "Jacob";
+        String sOperator = (sName == "Jacob") ? "System operator recognised": "System user unknown";
+        System.out.println(sName +", "+ sOperator);
+
+        String sNamedemo = "Jack";
+        String sOperatordemo = (sNamedemo == "Jacob") ? "System operator recognised": "System user unknown";
+        System.out.println(sName +", "+ sOperator);
+
+
 
 
     }
