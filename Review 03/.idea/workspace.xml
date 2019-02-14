@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e527b94e-186e-4b38-a8eb-1c744f78f0e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Review03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Review03.java" afterDir="false" />
-    </list>
+    <list default="true" id="e527b94e-186e-4b38-a8eb-1c744f78f0e3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,21 +53,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Review 03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Review 03" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549638687041" />
