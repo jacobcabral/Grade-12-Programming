@@ -48,7 +48,8 @@ public class Methods02 {
             System.out.println(iNumberToTest + " is not a prime number.");
     }
 
-    public static void isPrimeNumber (int iNumberToTest) {
+    public static void isPrimeNumber (int iNumberToTest)
+    {
         boolean nonPrime = false;
         for (int i = 2; i <= iNumberToTest / 2; ++i) {
             // nonprime
@@ -65,6 +66,48 @@ public class Methods02 {
         }
 
     }
+
+    public static int lcm(int number1, int number2) {
+        for (int i = 1; ; i++) {
+            if (i % number1 == 0 && i % number2 == 0) {
+                return i;
+            }
+        }
+    }
+
+    public static int gcf (int number1, int number2) {
+        if (number2 == 0){
+            return number1;
+        }
+        return gcf(number2, number1%number2);
+    }
+
+    public static double round (double number1, int number2)
+    {
+        for (int i = 0; i < number2; i++) {
+            number1 = number1 * 10;
+        }
+       number1 = Math.round(number1);
+
+        for (int i = 0; i < number2; i++) {
+            number1 = number1 / 10;
+        }
+        return number1;
+    }
+
+    public static String padRight(String s, int n) {
+        return String.format("%-" + n + "s", s);
+    }
+
+    public static String padLeft(String s, int n) {
+        return String.format("%" + n + "s", s);
+    }
+
+
+
+
+
+
 
     public static void main(String[] args) {
         out("I will be paid on Friday the ");
@@ -83,6 +126,12 @@ public class Methods02 {
         testPrimeNumber(15);
 
         isPrimeNumber(5);
+
+        System.out.println(gcf(25,5));
+
+        System.out.println(round(2.135,2));
+
+
 
     }
 
